@@ -122,10 +122,10 @@ const FireworksCanvas = forwardRef<CanvasHandles, {}>((props, ref) => {
   const launch = useCallback((type: FireworkType, powerScale = 1) => {
     const { y: centerY } = projectionCenter.current;
     const hue = type === FireworkType.SMILEY ? 60 : Math.random() * 360;
-    const launcherPosition = { x: (Math.random() - 0.5) * 100, y: centerY + 100, z: (Math.random() - 0.5) * 200 };
+    const launcherPosition = { x: (Math.random() - 0.5) * 100, y: centerY, z: (Math.random() - 0.5) * 200 };
     
     // Calculate launch velocity to reach a nice height
-    const targetY = -centerY * (0.2 + Math.random() * 0.5) * powerScale;
+    const targetY = -centerY * (0.25 + Math.random() * 0.4) * powerScale;
     const requiredHeight = launcherPosition.y - targetY;
     const initialVy = -Math.sqrt(2 * C.GRAVITY * Math.max(0, requiredHeight));
 
