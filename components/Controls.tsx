@@ -33,7 +33,7 @@ export default function Controls({ onLaunch, onStarMine }: ControlsProps): React
           <ControlButton onClick={() => onLaunch(FireworkType.SMILEY)}>
             😊
           </ControlButton>
-          <ControlButton onClick={onStarMine} className="col-span-2 sm:col-span-1 font-bold">
+          <ControlButton onClick={onStarMine} className="col-span-2 sm:col-span-1 font-bold whitespace-nowrap">
             スターマイン
           </ControlButton>
         </div>
