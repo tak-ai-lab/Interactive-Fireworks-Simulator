@@ -18,9 +18,9 @@ const ControlButton: React.FC<{ onClick: () => void; children: React.ReactNode, 
 
 export default function Controls({ onLaunch, onStarMine }: ControlsProps): React.ReactNode {
   return (
-    <div className="absolute bottom-0 left-0 right-0 p-4 z-10">
+    <div className="absolute bottom-0 left-0 right-0 p-4 pb-[calc(1rem+env(safe-area-inset-bottom))] z-10">
       <div className="max-w-xl mx-auto bg-gray-900/50 backdrop-blur-md p-3 sm:p-4 rounded-xl shadow-2xl">
-        <div className="grid grid-cols-4 sm:grid-cols-5 gap-2 sm:gap-3 text-center">
+        <div className="grid grid-cols-2 sm:grid-cols-5 gap-3 text-center">
           <ControlButton onClick={() => onLaunch(FireworkType.KIKU)}>
             菊
           </ControlButton>
@@ -33,7 +33,7 @@ export default function Controls({ onLaunch, onStarMine }: ControlsProps): React
           <ControlButton onClick={() => onLaunch(FireworkType.SMILEY)}>
             😊
           </ControlButton>
-          <ControlButton onClick={onStarMine} className="col-span-4 sm:col-span-1 font-bold whitespace-nowrap">
+          <ControlButton onClick={onStarMine} className="col-span-2 sm:col-span-1 font-bold whitespace-nowrap">
             スターマイン
           </ControlButton>
         </div>
