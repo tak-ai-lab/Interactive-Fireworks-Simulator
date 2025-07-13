@@ -18,7 +18,7 @@ const ControlButton: React.FC<{ onClick: () => void; children: React.ReactNode, 
 
 export default function Controls({ onLaunch, onStarMine }: ControlsProps): React.ReactNode {
   return (
-    <div className="absolute bottom-0 left-0 right-0 p-4 pb-[calc(2rem+env(safe-area-inset-bottom))] z-10">
+    <div className="absolute bottom-0 left-0 right-0 p-4 pb-[calc(3rem+env(safe-area-inset-bottom))] z-10">
       <div className="max-w-xl mx-auto bg-gray-900/50 backdrop-blur-md p-3 sm:p-4 rounded-xl shadow-2xl">
         <div className="grid grid-cols-2 sm:grid-cols-5 gap-3 text-center">
           <ControlButton onClick={() => onLaunch(FireworkType.KIKU)}>
